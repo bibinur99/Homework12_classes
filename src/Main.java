@@ -1,20 +1,26 @@
 public class Main {
     public static void main(String[] args) {
-        Book first = new Book("To kill a Mockingbird", "Harper Lee", 1960);
-        Book second  = new Book(  " ""Drei Kammeraden"", "Erich Maria Remark", 1936);
-        System.out.println("first book is " + first.getName() + ", "
-                + first.getAuthor()+ ", " + first.getYear());
-        System.out.println("second book is " + second.getName() + ", " + second.getAuthor()+
-                ", "+ second.getYear());
-
+        System.out.println("HOMEWORK:");
         Author lee = new Author("Harper", "Lee");
-        System.out.println("lee.authorName = " + lee.getAuthorName() + " " +
-                lee.getAuthorSurname());
+        String harper = lee.getAuthorName() + " "+ lee.getAuthorSurname();
+        System.out.println("lee.authorName = " + harper);
+
         Author remark = new Author("Erich Maria", "Remark");
-        System.out.println("remark.authorName = " + " " + remark.getAuthorName()+
-                " " + remark.getAuthorSurname());
+        String erich = remark.getAuthorName()+ " " + remark.getAuthorSurname();
+        System.out.println("remark.authorName = " + erich );
+        System.out.println();
+
+        Book first = new Book("To kill a Mockingbird", lee, 1960);
+        Book second  = new Book(  "Drei Kammeraden", remark, 1936);
+        System.out.println("First book is " + first.getName() + ", "
+                + harper+ ", " + first.getYear());
+        System.out.println();
+        System.out.println("Second book is " + second.getName() + ", " + erich +
+                ", "+ second.getYear());
+        System.out.println();
+
         first.setYear(1961);
-        System.out.println("first book's change: " + first.getYear());
+        System.out.println("First book's change: " + first.getYear());
 
     }
 }
